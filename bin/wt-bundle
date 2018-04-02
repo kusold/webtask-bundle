@@ -42,6 +42,16 @@ bundleArgs.addArgument(
 );
 
 bundleArgs.addArgument(
+    ['--target'],
+    {
+        help: 'Babel target',
+        action: 'storeTrue',
+        defaultValue: 4,
+        dest: 'target',
+    }
+);
+
+bundleArgs.addArgument(
     ['-o', '--output'],
     {
         help: 'Write the bundled code to a file instead of stdout',
